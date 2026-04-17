@@ -4,7 +4,7 @@ from pathlib import Path
 BESTANDSNAAM = Path("data.json")
 
 def load_books():
-    if not BESTANDSNAAM.exists :
+    if not BESTANDSNAAM.exists():
         return []
     try:
         with open(BESTANDSNAAM, "r") as bestand: 
@@ -14,7 +14,7 @@ def load_books():
 
 
 def save_books(books):
-    with open("data.json", "w") as bestand:
+    with open(BESTANDSNAAM, "w") as bestand:
         json.dump(books, bestand, indent = 4)
 
 

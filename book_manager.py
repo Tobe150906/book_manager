@@ -20,8 +20,10 @@ def delete_book(books, index):
     else:
         print("ongeldige waarde")
 def search_books(books, search_word):
+    gevonden = False
     for book in books:
         if search_word.lower() in book["title"].lower():
-            print(f"{book["title"]} | {book["author"]}")
-        else:
+            print(f"{book['title']} | {book['author']}")
+            gevonden = True
+        if not gevonden:
             print("boek niet gevonden kijk na op schrijffouten.")
