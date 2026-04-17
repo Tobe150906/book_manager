@@ -36,6 +36,8 @@ def main():
         elif keuze == "5":
             print("programma stoppen")
             break
+        else:
+            print("ongeldige keuze")
 
 
 if __name__ == "__main__":

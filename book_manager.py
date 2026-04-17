@@ -22,6 +22,6 @@ def delete_book(books, index):
 def search_books(books, search_word):
     for book in books:
         if search_word.lower() in book["title"].lower():
-            print(book["title"])
+            print(f"{book["title"]} | {book["author"]}")
         else:
             print("boek niet gevonden kijk na op schrijffouten.")
